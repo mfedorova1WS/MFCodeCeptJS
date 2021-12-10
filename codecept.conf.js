@@ -5,22 +5,26 @@ const { setHeadlessWhen } = require('@codeceptjs/configure');
 setHeadlessWhen(process.env.HEADLESS);
 
 exports.config = {
-  tests: './*_test.js',
+  tests: './testsAltoro/*_test.js',
   output: './output',
   helpers: {
     Playwright: {
       url: 'https://try.vikunja.io',
-      show: true,
+      show: false,
       browser: 'chromium'
     },
     REST: {
-      endpoint: 'https://try.vikunja.io/api/v1',
+      endpoint: 'http://demo.testfire.net/api',
     },
   },
   include: {
     I: './steps_file.js',
-    mainPage: './pages/main.js',
-    currentPage: './pages/current.js',
+    //mainPage: './pages/main.js',
+    //currentPage: './pages/current.js',
+    headerPage: './pagesAltoro/Header.js',
+    loginPage: './pagesAltoro/Login.js',
+    myAccountPage: './pagesAltoro/MyAccount.js',
+    testDataAltoroPage: './testData/TestDataAltoro.js',
   },
   bootstrap: null,
   mocha: {},

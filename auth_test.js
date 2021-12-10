@@ -1,4 +1,4 @@
-const assert = require ('assert');
+/*const assert = require ('assert');
 Feature('auth');
 
 Scenario('Auth with valid login and valid pass API',async ({ I }) => {
@@ -12,3 +12,4 @@ Scenario('Auth with valid login and valid pass UI',async ({ I, mainPage, current
   const profileNameText = await currentPage.getProfileName();
   assert.deepEqual(profileNameText, 'demo');
 });
+*/
